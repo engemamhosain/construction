@@ -1,155 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Projects & Services | Al Muktashf</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f8f9fa;
-    }
-    .section-title {
-      font-weight: 700;
-      margin-bottom: 1.5rem;
-    }
-    .project-card {
-      background: #fff;
-      border-left: 5px solid #ffc107;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-      transition: all 0.3s ease;
-    }
-    .project-card:hover {
-      transform: translateY(-3px);
-    }
-    .work-card {
-      background: #fff;
-      border-radius: 15px;
-      padding: 25px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-      height: 100%;
-      transition: 0.3s;
-    }
-    .work-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-    }
-    .icon-box {
-      font-size: 2rem;
-      color: #ffc107;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fluor.com - Market Reach (Blue Area Tailwind)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Optional: If you want to use custom colors defined in your tailwind.config.js,
+           you would reference them here. For this example, we're using default colors
+           or direct hex values if they match closely. */
+        /* If you have a tailwind.config.js, you'd add custom colors like this:
+           extend: {
+               colors: {
+                   'dark-blue-bg': '#0b1a2a',
+                   'card-bg': '#172a3f',
+                   'accent-blue': '#007bff',
+               }
+           }
+        */
+        body {
+            font-family: 'Open Sans', sans-serif; /* Tailwind doesn't include custom fonts by default, you'd link this */
+        }
+        /* A custom class for the blue arrow, as Tailwind doesn't have a direct equivalent for this style */
+        .card-arrow {
+            font-size: 1.125rem; /* text-lg */
+            font-weight: bold;
+            color: #007bff; /* blue-500 equivalent for primary accent */
+        }
+    </style>
 </head>
-<body>
-
-<!-- Header -->
-<section class="py-5 bg-dark text-white text-center">
-  <div class="container">
-    <h1 class="display-5 fw-bold">Ongoing Projects & Our Work</h1>
-    <p class="lead">Explore our active projects and specialized services</p>
-  </div>
-</section>
-
-<!-- Ongoing Projects -->
-<section class="py-5">
-  <div class="container">
-    <h2 class="section-title text-center">Ongoing Projects</h2>
-    <div class="row g-4">
-
-      <div class="col-md-6">
-        <div class="p-4 project-card rounded">
-          <h5>🏗️ AL KHOR VILLA (G+1+P+OUT KITCHEN+MAJLIS)</h5>
-          <p class="text-muted">Full-scale residential villa project with all civil & interior works.</p>
+<body class="bg-[#0b1a2a] text-white">
+    <div class="p-5"> <div class="mb-5">
+            <h1 class="text-3xl font-semibold text-white flex items-center">
+                Market Reach <span class="ml-2 card-arrow">></span>
+            </h1>
         </div>
-      </div>
 
-      <div class="col-md-6">
-        <div class="p-4 project-card rounded">
-          <h5>🏫 SIDRA ACADEMY PROJECT – DOHA</h5>
-          <p class="text-muted">Electrical, HVAC, and finishing works for academic buildings.</p>
+        <div class="flex gap-10"> <div class="flex-1"> <h2 class="text-2xl font-semibold text-white mb-5">Industries</h2>
+                <div class="grid grid-cols-3 gap-5"> <div class="bg-[#172a3f] rounded-lg overflow-hidden relative cursor-pointer hover:translate-y-[-5px] transition-transform duration-200">
+                        <img src="https://via.placeholder.com/300x150/0a1727/FFFFFF?text=Chemicals_Image" alt="Chemicals" class="w-full h-36 object-cover block">
+                        <div class="p-4 flex justify-between items-center text-white">
+                            <span class="text-base font-semibold">Chemicals</span>
+                            <span class="card-arrow">></span>
+                        </div>
+                    </div>
+                    <div class="bg-[#172a3f] rounded-lg overflow-hidden relative cursor-pointer hover:translate-y-[-5px] transition-transform duration-200">
+                        <img src="https://via.placeholder.com/300x150/0a1727/FFFFFF?text=Energy_Transition_Image" alt="Energy Transition" class="w-full h-36 object-cover block">
+                        <div class="p-4 flex justify-between items-center text-white">
+                            <span class="text-base font-semibold">Energy Transition</span>
+                            <span class="card-arrow">></span>
+                        </div>
+                    </div>
+                    <div class="bg-[#172a3f] rounded-lg overflow-hidden relative cursor-pointer hover:translate-y-[-5px] transition-transform duration-200">
+                        <img src="https://via.placeholder.com/300x150/0a1727/FFFFFF?text=Fuels_Image" alt="Fuels" class="w-full h-36 object-cover block">
+                        <div class="p-4 flex justify-between items-center text-white">
+                            <span class="text-base font-semibold">Fuels</span>
+                            <span class="card-arrow">></span>
+                        </div>
+                    </div>
+                    <div class="bg-[#172a3f] rounded-lg overflow-hidden relative cursor-pointer hover:translate-y-[-5px] transition-transform duration-200">
+                        <img src="https://via.placeholder.com/300x150/0a1727/FFFFFF?text=Government_Image" alt="Government" class="w-full h-36 object-cover block">
+                        <div class="p-4 flex justify-between items-center text-white">
+                            <span class="text-base font-semibold">Government</span>
+                            <span class="card-arrow">></span>
+                        </div>
+                    </div>
+                    <div class="bg-[#172a3f] rounded-lg overflow-hidden relative cursor-pointer hover:translate-y-[-5px] transition-transform duration-200">
+                        <img src="https://via.placeholder.com/300x150/0a1727/FFFFFF?text=Infrastructure_Image" alt="Infrastructure" class="w-full h-36 object-cover block">
+                        <div class="p-4 flex justify-between items-center text-white">
+                            <span class="text-base font-semibold">Infrastructure</span>
+                            <span class="card-arrow">></span>
+                        </div>
+                    </div>
+                    <div class="bg-[#172a3f] rounded-lg overflow-hidden relative cursor-pointer hover:translate-y-[-5px] transition-transform duration-200">
+                        <img src="https://via.placeholder.com/300x150/0a1727/FFFFFF?text=Life_Sciences_Image" alt="Life Sciences" class="w-full h-36 object-cover block">
+                        <div class="p-4 flex justify-between items-center text-white">
+                            <span class="text-base font-semibold">Life Sciences</span>
+                            <span class="card-arrow">></span>
+                        </div>
+                    </div>
+                    <div class="bg-[#172a3f] rounded-lg overflow-hidden relative cursor-pointer hover:translate-y-[-5px] transition-transform duration-200">
+                        <img src="https://via.placeholder.com/300x150/0a1727/FFFFFF?text=Mining_Metals_Image" alt="Mining & Metals" class="w-full h-36 object-cover block">
+                        <div class="p-4 flex justify-between items-center text-white">
+                            <span class="text-base font-semibold">Mining & Metals</span>
+                            <span class="card-arrow">></span>
+                        </div>
+                    </div>
+                    <div class="bg-[#172a3f] rounded-lg overflow-hidden relative cursor-pointer hover:translate-y-[-5px] transition-transform duration-200 border-2 border-[#007bff]">
+                        <img src="https://via.placeholder.com/300x150/0a1727/FFFFFF?text=Technology_Image" alt="Technology" class="w-full h-36 object-cover block">
+                        <div class="p-4 flex justify-between items-center text-white">
+                            <span class="text-base font-semibold">Technology</span>
+                            <span class="card-arrow">></span>
+                        </div>
+                    </div>
+                    <div class="bg-[#172a3f] rounded-lg overflow-hidden relative cursor-pointer hover:translate-y-[-5px] transition-transform duration-200">
+                        <img src="https://via.placeholder.com/300x150/0a1727/FFFFFF?text=Mission_Solutions_Image" alt="Mission Solutions" class="w-full h-36 object-cover block">
+                        <div class="p-4 flex justify-between items-center text-white">
+                            <span class="text-base font-semibold">Mission Solutions</span>
+                            <span class="card-arrow">></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex-1"> <h2 class="text-2xl font-semibold text-white mb-5">Business Segments</h2>
+                <div class="grid grid-cols-1 gap-5"> <div class="bg-[#172a3f] rounded-lg overflow-hidden relative cursor-pointer hover:translate-y-[-5px] transition-transform duration-200">
+                        <img src="https://via.placeholder.com/300x150/0a1727/FFFFFF?text=Energy_Solutions_Image" alt="Energy Solutions" class="w-full h-36 object-cover block">
+                        <div class="p-4 flex justify-between items-center text-white">
+                            <span class="text-base font-semibold">Energy Solutions</span>
+                            <span class="card-arrow">></span>
+                        </div>
+                    </div>
+                    <div class="bg-[#172a3f] rounded-lg overflow-hidden relative cursor-pointer hover:translate-y-[-5px] transition-transform duration-200">
+                        <img src="https://via.placeholder.com/300x150/0a1727/FFFFFF?text=Urban_Solutions_Image" alt="Urban Solutions" class="w-full h-36 object-cover block">
+                        <div class="p-4 flex justify-between items-center text-white">
+                            <span class="text-base font-semibold">Urban Solutions</span>
+                            <span class="card-arrow">></span>
+                        </div>
+                    </div>
+                    <div class="bg-[#172a3f] rounded-lg overflow-hidden relative cursor-pointer hover:translate-y-[-5px] transition-transform duration-200">
+                        <img src="https://via.placeholder.com/300x150/0a1727/FFFFFF?text=Mission_Solutions_Image_2" alt="Mission Solutions" class="w-full h-36 object-cover block">
+                        <div class="p-4 flex justify-between items-center text-white">
+                            <span class="text-base font-semibold">Mission Solutions</span>
+                            <span class="card-arrow">></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-
-      <div class="col-md-6">
-        <div class="p-4 project-card rounded">
-          <h5>🏙️ AL WAAB CITY</h5>
-          <p class="text-muted">MEP and structural manpower support for commercial zones.</p>
-        </div>
-      </div>
-
     </div>
-  </div>
-</section>
-
-<!-- Our Work -->
-<section class="py-5 bg-light">
-  <div class="container">
-    <h2 class="section-title text-center">Our Specialized Work</h2>
-    <div class="row g-4">
-
-      <!-- Construction -->
-      <div class="col-md-6 col-lg-4">
-        <div class="work-card text-center">
-          <div class="icon-box mb-2">🏗️</div>
-          <h5 class="fw-bold">Construction & Civil</h5>
-          <p class="text-muted">Masonry, plastering, block work, concrete finishing, tiling.</p>
-        </div>
-      </div>
-
-      <!-- MEP -->
-      <div class="col-md-6 col-lg-4">
-        <div class="work-card text-center">
-          <div class="icon-box mb-2">💡</div>
-          <h5 class="fw-bold">Electrical & MEP</h5>
-          <p class="text-muted">Wiring, panel installation, plumbing, chilled water & fire safety.</p>
-        </div>
-      </div>
-
-      <!-- Interior -->
-      <div class="col-md-6 col-lg-4">
-        <div class="work-card text-center">
-          <div class="icon-box mb-2">🎨</div>
-          <h5 class="fw-bold">Interior & Design</h5>
-          <p class="text-muted">Gypsum, false ceilings, wall treatments, and decorative finishes.</p>
-        </div>
-      </div>
-
-      <!-- Manpower -->
-      <div class="col-md-6 col-lg-4">
-        <div class="work-card text-center">
-          <div class="icon-box mb-2">👷</div>
-          <h5 class="fw-bold">Manpower Supply</h5>
-          <p class="text-muted">Skilled labor: welders, electricians, carpenters, steel fixers.</p>
-        </div>
-      </div>
-
-      <!-- Oil & Gas -->
-      <div class="col-md-6 col-lg-4">
-        <div class="work-card text-center">
-          <div class="icon-box mb-2">⛽</div>
-          <h5 class="fw-bold">Oil & Gas Support</h5>
-          <p class="text-muted">TIG/MIG welders, fabricators, fitters for high-pressure pipelines.</p>
-        </div>
-      </div>
-
-      <!-- General Maintenance -->
-      <div class="col-md-6 col-lg-4">
-        <div class="work-card text-center">
-          <div class="icon-box mb-2">🔧</div>
-          <h5 class="fw-bold">Maintenance Services</h5>
-          <p class="text-muted">On-call general building maintenance & technical support.</p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- Footer -->
-<footer class="bg-dark text-white text-center py-3">
-  <p class="mb-0">&copy; 2025 Al Muktashf General Contracting. All rights reserved.</p>
-</footer>
-
 </body>
 </html>

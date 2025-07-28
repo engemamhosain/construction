@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Slide Down Panel Below Navbar Example</title>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  /* Fixed navbar at the top */
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background: #2c3e50;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    z-index: 10000;
+  }
+
+  nav a {
+    margin-right: 20px;
+    color: #ecf0f1;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+
+  nav a.active {
+    color: #1abc9c;
+  }
+
+  .arrow {
+    display: inline-block;
+    margin-left: 6px;
+    transition: transform 0.3s ease;
+    font-size: 12px;
+    user-select: none;
+  }
+
+  .arrow.rotate {
+    transform: rotate(90deg);
+  }
+
+  /* Sliding content panels fixed below navbar */
+  .section {
+    position: fixed;
+    top: 60px; /* height of navbar */
+    left: 0;
+    right: 0;
+    background: #ecf0f1;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+    display: none;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 9999;
+    max-height: 300px; /* optional max height */
+  }
+
+  /* Page main content */
+  main {
+    margin-top: 80px; /* spacing below navbar and panel */
+    padding: 20px;
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a data-target="#section1">About <span class="arrow">▶</span></a>
+  <a data-target="#section2">Services &amp; Expertise <span class="arrow">▶</span></a>
+  <a data-target="#section3">Projects <span class="arrow">▶</span></a>
+</nav>
+
+<div id="section1" class="section">
+  <h2>About Us</h2>
+  <p>We are a leading company dedicated to providing excellent services and expertise in our industry.</p>
+</div>
+
+<div id="section2" class="section">
+  <h2>Services &amp; Expertise</h2>
+  <p>Our team offers a wide range of services, from consulting to implementation, ensuring customer satisfaction.</p>
+</div>
+
+<div id="section3" class="section">
+  <h2>Projects</h2>
+  <p>Explore our portfolio of successful projects completed for clients worldwide.</p>
+</div>
+
+<main>
+  <h1>Welcome to Our Website</h1>
+  <p>This is the main page content. Scroll and interact with the navigation to see panels slide down below the fixed navbar.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur auctor, nunc sit amet dapibus consequat, orci urna cursus risus, in imperdiet purus lorem at nulla.</p>
+  <p style="height: 1200px;"></p> <!-- Just for scroll demo -->
+</main>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  $(function() {
+    let currentSection = null;
+    let currentLink = null;
+
+    $("nav a").click(function(e) {
+      e.preventDefault();
+
+      const target = $(this).data("target");
+      const section = $(target);
+
+      // Close any other open section
+      if (currentSection && currentSection.attr("id") !== section.attr("id")) {
+        currentSection.slideUp("slow");
+        currentLink.removeClass("active");
+        currentLink.find(".arrow").removeClass("rotate");
+      }
+
+      // Toggle current section
+      if (section.is(":visible")) {
+        section.slideUp("slow");
+        $(this).removeClass("active");
+        $(this).find(".arrow").removeClass("rotate");
+        currentSection = null;
+        currentLink = null;
+      } else {
+        section.slideDown("slow");
+        $(this).addClass("active");
+        $(this).find(".arrow").addClass("rotate");
+        currentSection = section;
+        currentLink = $(this);
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
